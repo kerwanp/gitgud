@@ -1,0 +1,22 @@
+[package]
+name = "gitgud"
+description = "A CLI tool to automate commit messages"
+version = "1.0.0"
+edition = "2024"
+license-file = "LICENSE"
+repository = "https://github.com/kerwanp/gitgud"
+readme = "README.md"
+keywords = ["git", "cli", "ai", "openai"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5.39", features = ["derive"] }
+dotenvy = "0.15.7"
+inquire = "0.7.5"
+openai = "1.1.1"
+serde = { version = "1.0.219", features = ["derive"] }
+spinners = "4.1.1"
+thiserror = "2.0.12"
+tinytemplate = "1.2.1"
+tokio = "1.45.1"
+toml = "0.8.22"

@@ -1,0 +1,57 @@
+[ai.openai]
+model = "gpt-4.1-nano-2025-04-14"
+
+[[prompt.examples]]
+title = "Commit message with description and breaking change footer"
+content = """
+feat: allow provided config object to extend other configs
+
+BREAKING CHANGE: `extends` key in config file is now used for extending other config files
+"""
+
+[[prompt.examples]]
+title = "Commit message with ! to draw attention to breaking change"
+content = """
+feat!: send an email to the customer when a product is shipped
+"""
+
+[[prompt.examples]]
+title = "Commit message with scope and ! to draw attention to breaking change"
+content = """
+feat(api)!: send an email to the customer when a product is shipped
+"""
+
+[[prompt.examples]]
+title = "Commit message with both ! and BREAKING CHANGE footer"
+content = """
+chore!: drop support for Node 6
+
+BREAKING CHANGE: use JavaScript features not available in Node 6.
+"""
+
+[[prompt.examples]]
+title = "Commit message with no body"
+content = """
+docs: correct spelling of CHANGELOG
+"""
+
+[[prompt.examples]]
+title = "Commit message with scope"
+content = """
+feat(lang): add Polish language
+"""
+
+[[prompt.examples]]
+title = "Commit message with multi-paragraph body and multiple footers"
+content = """
+fix: prevent racing of requests
+
+Introduce a request id and a reference to latest request. Dismiss
+incoming responses other than from latest request.
+
+Remove timeouts which were used to mitigate the racing issue but are
+obsolete now.
+
+Reviewed-by: Z
+Refs: #123
+"""
